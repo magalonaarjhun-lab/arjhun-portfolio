@@ -307,3 +307,15 @@ body.dark .service-boxes .box {
 body.dark .circle {
   color: #f5f5f5;
 }
+/* Default hidden state */
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* When visible */
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}

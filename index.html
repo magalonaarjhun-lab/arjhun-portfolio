@@ -93,10 +93,14 @@
 
     <!-- ===== About Section ===== -->
     <section id="about" class="about">
-      <div class="title"><span>About Me</span></div>
+      <div class="title animate fade-up"><span>About Me</span></div>
+
       <div class="about-details">
-        <div class="left"><img src="about.jpg" alt="Arjhun" /></div>
-        <div class="right">
+        <div class="left animate fade-right">
+          <img src="about.jpg" alt="Arjhun" />
+        </div>
+
+        <div class="right animate fade-left">
           <div class="topic">Design is my Passion</div>
           <p>
             Hello! I'm Arjhun Magalona, a passionate Software Developer who
@@ -111,28 +115,28 @@
 
     <!-- ===== Skills Section ===== -->
     <section id="skills" class="skills">
-      <div class="title"><span>My Skills</span></div>
+      <div class="title animate fade-up"><span>My Skills</span></div>
       <div class="skills-container">
         <!-- Example skill -->
-        <div class="skill">
+        <div class="skill animate fade-up" style="transition-delay: 0.1s">
           <div class="circle" data-percent="90">
             <span>90%</span>
           </div>
           <h3>HTML</h3>
         </div>
-        <div class="skill">
+        <div class="skill animate fade-up" style="transition-delay: 0.2s">
           <div class="circle" data-percent="80">
             <span>80%</span>
           </div>
           <h3>CSS</h3>
         </div>
-        <div class="skill">
+        <div class="skill animate fade-up" style="transition-delay: 0.3s">
           <div class="circle" data-percent="70">
             <span>70%</span>
           </div>
           <h3>JavaScript</h3>
         </div>
-        <div class="skill">
+        <div class="skill animate fade-up" style="transition-delay: 0.4s">
           <div class="circle" data-percent="60">
             <span>60%</span>
           </div>
@@ -143,34 +147,34 @@
 
     <!-- ===== Services Section ===== -->
     <section id="services" class="services">
-      <div class="title"><span>My Services</span></div>
+      <div class="title animate fade-up"><span>My Services</span></div>
       <div class="service-boxes">
-        <div class="box">
+        <div class="box animate fade-up" style="transition-delay: 0.1s">
           <i class="fas fa-desktop"></i>
           <h3>Web Development</h3>
           <p>Creating websites and web apps.</p>
         </div>
-        <div class="box">
+        <div class="box animate fade-up" style="transition-delay: 0.2s">
           <i class="fas fa-paint-brush"></i>
           <h3>Graphic Design</h3>
           <p>Making designs attractive and easier to understand.</p>
         </div>
-        <div class="box">
+        <div class="box animate fade-up" style="transition-delay: 0.3s">
           <i class="fas fa-chart-line"></i>
           <h3>Digital Marketing</h3>
           <p>Helping businesses grow online.</p>
         </div>
-        <div class="box">
+        <div class="box animate fade-up" style="transition-delay: 0.4s">
           <i class="fab fa-android"></i>
           <h3>Icon Design</h3>
           <p>Designing symbols that improve usability and look.</p>
         </div>
-        <div class="box">
+        <div class="box animate fade-up" style="transition-delay: 0.5s">
           <i class="fas fa-camera-retro"></i>
           <h3>Photography</h3>
           <p>Capturing visuals that tell stories.</p>
         </div>
-        <div class="box">
+        <div class="box animate fade-up" style="transition-delay: 0.6s">
           <i class="fas fa-tablet-alt"></i>
           <h3>App Development</h3>
           <p>Building apps that help people in daily life and work.</p>
@@ -180,15 +184,15 @@
 
     <!-- ===== Contact Section ===== -->
     <section id="contact" class="contact">
-      <div class="title"><span>Contact</span></div>
-      <div class="text">
+      <div class="title animate fade-up"><span>Contact</span></div>
+      <div class="text animate fade-up">
         <div class="topic">Have Any Project?</div>
         <p>
           I am a passionate IT student aspiring to become a Software Developer.
           My goal is to create innovative projects and grow as a professional
           developer in the future.
         </p>
-        <div class="button">
+        <div class="button animate fade-up" style="transition-delay: 0.2s">
           <a
             href="https://www.facebook.com/arjhun.magalona.2024"
             target="_blank"
@@ -253,21 +257,42 @@
       });
     </script>
     <script>
-  const darkToggle = document.getElementById("dark-mode-toggle");
+      const darkToggle = document.getElementById("dark-mode-toggle");
 
-  darkToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark"); // match your CSS
+      darkToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark"); // match your CSS
 
-    // Change icon moon/sun
-    const icon = darkToggle.querySelector("i");
-    if (document.body.classList.contains("dark")) {
-      icon.classList.remove("fa-moon");
-      icon.classList.add("fa-sun");
-    } else {
-      icon.classList.remove("fa-sun");
-      icon.classList.add("fa-moon");
-    }
-  });
-</script>
+        // Change icon moon/sun
+        const icon = darkToggle.querySelector("i");
+        if (document.body.classList.contains("dark")) {
+          icon.classList.remove("fa-moon");
+          icon.classList.add("fa-sun");
+        } else {
+          icon.classList.remove("fa-sun");
+          icon.classList.add("fa-moon");
+        }
+      });
+    </script>
+
+    <script>
+      // Scroll animation with IntersectionObserver + custom animation types
+      document.addEventListener("DOMContentLoaded", () => {
+        const animatedElements = document.querySelectorAll(".animate");
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                obs.unobserve(entry.target); // stop observing once shown
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        animatedElements.forEach((el) => observer.observe(el));
+      });
+    </script>
   </body>
 </html>

@@ -19,3 +19,18 @@ darkToggle.addEventListener("click", () => {
     localStorage.setItem("theme", "light");
   }
 });
+// Select all elements with .animate class
+const animatedElements = document.querySelectorAll(".animate");
+
+const showOnScroll = () => {
+  animatedElements.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+};
+
+// Run on scroll + page load
+window.addEventListener("scroll", showOnScroll);
+document.addEventListener("DOMContentLoaded", showOnScroll);
