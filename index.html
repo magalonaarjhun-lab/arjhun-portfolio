@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arjhun Magalona | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome & Flaticon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css"
+    />
+  </head>
+  <body>
+    <!-- ===== Navigation ===== -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo"><span>Arjhun Magalona</span></div>
+        <div class="links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+      </div>
+      <!-- Mobile Dropdown -->
+      <div class="dropdown">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- ===== Home Section ===== -->
+    <section id="home" class="hero">
+      <div class="main-container">
+        <!-- Intro Content -->
+        <div class="content">
+          <h1>Hey I'm <span>Arjhun Magalona</span></h1>
+          <div class="typerwriter">
+            I'm <span class="typerwriter-text"></span>
+          </div>
+          <p>
+            Hello! I'm Arjhun Magalona, a passionate Software Developer who
+            enjoys creating modern, responsive, and user-friendly applications.
+            I specialize in web development and problem-solving, and I’m always
+            eager to learn new technologies to improve my skills and deliver
+            better solutions.
+          </p>
+          <!-- Social Media Links -->
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/arjhun.magalona.2024"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="https://github.com/magalonaarjhun-lab"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=magalonaarjhun@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section id="about" class="about">
+      <div class="title"><span>About Me</span></div>
+      <div class="about-details">
+        <div class="left"><img src="about.jpg" alt="Arjhun" /></div>
+        <div class="right">
+          <div class="topic">Design is my Passion</div>
+          <p>
+            Hello! I'm Arjhun Magalona, a passionate Software Developer who
+            enjoys creating modern, responsive, and user-friendly applications.
+            I specialize in web development and problem-solving, and I’m always
+            eager to learn new technologies to improve my skills and deliver
+            better solutions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills Section ===== -->
+    <section id="skills" class="skills">
+      <div class="title"><span>My Skills</span></div>
+      <div class="skills-container">
+        <!-- Example skill -->
+        <div class="skill">
+          <div class="circle" data-percent="90">
+            <span>90%</span>
+          </div>
+          <h3>HTML</h3>
+        </div>
+        <div class="skill">
+          <div class="circle" data-percent="80">
+            <span>80%</span>
+          </div>
+          <h3>CSS</h3>
+        </div>
+        <div class="skill">
+          <div class="circle" data-percent="70">
+            <span>70%</span>
+          </div>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill">
+          <div class="circle" data-percent="60">
+            <span>60%</span>
+          </div>
+          <h3>MySQL</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services Section ===== -->
+    <section id="services" class="services">
+      <div class="title"><span>My Services</span></div>
+      <div class="service-boxes">
+        <div class="box">
+          <i class="fas fa-desktop"></i>
+          <h3>Web Development</h3>
+          <p>Creating websites and web apps.</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Graphic Design</h3>
+          <p>Making designs attractive and easier to understand.</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-chart-line"></i>
+          <h3>Digital Marketing</h3>
+          <p>Helping businesses grow online.</p>
+        </div>
+        <div class="box">
+          <i class="fab fa-android"></i>
+          <h3>Icon Design</h3>
+          <p>Designing symbols that improve usability and look.</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-camera-retro"></i>
+          <h3>Photography</h3>
+          <p>Capturing visuals that tell stories.</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-tablet-alt"></i>
+          <h3>App Development</h3>
+          <p>Building apps that help people in daily life and work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section id="contact" class="contact">
+      <div class="title"><span>Contact</span></div>
+      <div class="text">
+        <div class="topic">Have Any Project?</div>
+        <p>
+          I am a passionate IT student aspiring to become a Software Developer.
+          My goal is to create innovative projects and grow as a professional
+          developer in the future.
+        </p>
+        <div class="button">
+          <a
+            href="https://www.facebook.com/arjhun.magalona.2024"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>Let's Chat</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <p>Created By <a href="#">Arjhun09</a> © 2025 All Rights Reserved</p>
+    </footer>
+
+    <!-- ===== Scripts ===== -->
+    <script>
+      // Typewriter Effect
+      const text = [
+        "a Software Developer",
+        "a Web Designer",
+        "a Problem Solver",
+      ];
+      let i = 0,
+        j = 0;
+      const speed = 150;
+      const typer = document.querySelector(".typerwriter-text");
+
+      function type() {
+        if (j < text[i].length) {
+          typer.textContent += text[i].charAt(j);
+          j++;
+          setTimeout(type, speed);
+        } else {
+          setTimeout(erase, 1000);
+        }
+      }
+
+      function erase() {
+        if (j > 0) {
+          typer.textContent = text[i].substring(0, j - 1);
+          j--;
+          setTimeout(erase, 80);
+        } else {
+          i = (i + 1) % text.length;
+          setTimeout(type, 500);
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => type());
+
+      // Mobile menu toggle
+      function hamburg() {
+        document.querySelector(".dropdown").classList.toggle("active");
+      }
+
+      // Circle percentage animation
+      document.querySelectorAll(".circle").forEach((circle) => {
+        const percent = circle.getAttribute("data-percent");
+        circle.style.background = `conic-gradient(#00bcd4 ${percent}%, #ddd ${percent}%)`;
+      });
+    </script>
+  </body>
+</html>
